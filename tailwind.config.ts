@@ -88,7 +88,7 @@ const config = {
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
   		fontFamily: {
-  			olifant: ["Playfair Display", "serif"],
+  			olifant: ["Olifant", "serif"],
   		},
   		backgroundImage: {
   			"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

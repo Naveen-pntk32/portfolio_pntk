@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Olifant";
+  src: url("https://db.onlinewebfonts.com/t/030ff7f43dec5bbb2c99976c7acdd7b1.eot");
+  src: url("https://db.onlinewebfonts.com/t/030ff7f43dec5bbb2c99976c7acdd7b1.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/030ff7f43dec5bbb2c99976c7acdd7b1.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/030ff7f43dec5bbb2c99976c7acdd7b1.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/030ff7f43dec5bbb2c99976c7acdd7b1.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/030ff7f43dec5bbb2c99976c7acdd7b1.svg#Olifant W00 Normal")format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Since Olifant is not available on Google Fonts, let's use a similar font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 

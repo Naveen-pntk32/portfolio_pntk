@@ -60,7 +60,7 @@ export function ContactSection() {
                   style={{ fontFamily: "Centra No.1, sans-serif" }}
                 >
                   <p className="text-2xl md:text-4xl text-[#111439] font-black leading-tight">
-                    &#x201C;Small steps are
+                    &#x201C; Small steps are
                   </p>
                   <p className="text-2xl md:text-4xl text-[#111439] font-black leading-tight">
                     Better than NO Steps &#x201D;
