@@ -1,8 +1,8 @@
-import { BlurText } from "./components/blur-text"
-import { Dock } from "./components/dock"
-import { SkillsSection } from "./components/skills-section"
-import { ProjectsSection } from "./components/projects-section"
-import { ContactSection } from "./components/contact-section"
+import { BlurText } from "./blur-text"
+import { Dock } from "./dock"
+import { SkillsSection } from "./skills-section"
+import { ProjectsSection } from "./projects-section"
+import { ContactSection } from "./contact-section"
 
 export default function PortfolioHero() {
   return (
@@ -26,7 +26,7 @@ export default function PortfolioHero() {
             <div className="mb-12">
               <h1 className="text-[#111439] font-black text-6xl md:text-4xl lg:text-6xl ">
                 <>
-                  <BlurText text="I'm Naveen " delay={300} />
+                  <BlurText text="I'm Navaneetha Krishnan" delay={300} />
                   
                 </>
               </h1>

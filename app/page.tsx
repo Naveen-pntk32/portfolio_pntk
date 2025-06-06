@@ -1,9 +1,9 @@
-import PortfolioHero from "../portfolio-hero"
+import PortfolioHero from "@/components/portfolio-hero"
 
-export default function Page() {
+export default function Home() {
   return (
-    <div>
+    <main>
       <PortfolioHero />
-    </div>
+    </main>
   )
 }
