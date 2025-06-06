@@ -16,7 +16,7 @@ export default function PortfolioHero() {
           <div className="text-center max-w-4xl px-6">
             {/* Small header text */}
             <div className="mb-8">
-              <span className="text-[#111439] text-lg font-semibold font-olifant">
+              <span className="text-[#343cd4] text-lg font-bold font-olifant">
                 Frontend Developer
               </span>
             </div>
