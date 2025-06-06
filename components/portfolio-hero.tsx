@@ -1,4 +1,3 @@
-import { BlurText } from "./blur-text"
 import { Dock } from "./dock"
 import { SkillsSection } from "./skills-section"
 import { ProjectsSection } from "./projects-section"
@@ -24,11 +23,8 @@ export default function PortfolioHero() {
 
             {/* Main portfolio heading */}
             <div className="mb-12">
-              <h1 className="text-[#111439] font-black text-6xl md:text-4xl lg:text-6xl ">
-                <>
-                  <BlurText text="I'm Navaneetha Krishnan" delay={300} />
-                  
-                </>
+              <h1 className="text-[#111439] font-black text-6xl md:text-4xl lg:text-6xl">
+                I'm Navaneetha Krishnan
               </h1>
             </div>
 
