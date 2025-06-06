@@ -16,8 +16,8 @@ export default function PortfolioHero() {
           <div className="text-center max-w-4xl px-6">
             {/* Small header text */}
             <div className="mb-8">
-              <span className="text-[#111439] text-lg font-semibold" style={{ fontFamily: "Eloquia Display, serif" }}>
-                *Graphic <em className="font-light">Design</em>
+              <span className="text-[#111439] text-lg font-semibold font-olifant">
+                Frontend Developer
               </span>
             </div>
 
@@ -30,9 +30,8 @@ export default function PortfolioHero() {
 
             {/* Subtitle */}
             <div>
-              <p className="text-[#111439] text-xl md:text-2xl font-normal">
-                <span className="font-semibold">Naveen P</span> | Selected works from 2021 - 2025
-              </p>
+              <p className="text-[#111439] text-xl md:text-2xl font-semibold">
+                I craft responsive, accessible, and performance-driven web interfaces using React, Tailwind CSS, and modern JavaScript </p>
             </div>
           </div>
         </div>
