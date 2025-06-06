@@ -13,8 +13,8 @@ const dockItems = [
 export function Dock() {
   const handleClick = (href: string, isResume?: boolean) => {
     if (isResume) {
-      // Open resume in new tab - replace with your actual resume URL
-      window.open("/resume.pdf", "_blank")
+      // Open resume in new tab
+      window.open("/NavaneethaKrishnan-Resume.pdf", "_blank", "noopener,noreferrer")
       return
     }
 
