@@ -18,7 +18,7 @@ export default function PortfolioHero() {
             {/* Small header text */}
             <div className="mb-8">
               <span className="text-[#111439] text-lg font-semibold" style={{ fontFamily: "Eloquia Display, serif" }}>
-                *Graphic <em className="font-light">Design</em>
+                *Graphic <em className="font-light  ">Design</em>
               </span>
             </div>
 
