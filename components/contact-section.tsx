@@ -1,4 +1,5 @@
 import { Mail, Github, Linkedin } from "lucide-react"
+import Magnet from "@/src/blocks/Animations/Magnet/Magnet"
 
 export function ContactSection() {
   return (
@@ -12,15 +13,16 @@ export function ContactSection() {
             {/* Left side - Contact */}
             <div className="flex flex-col items-center justify-center">
               {/* Circular heading */}
-              <div className="relative mb-16">
-                <div className="w-48 h-48 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/20">
-                  <h2 className="text-2xl md:text-3xl font-black text-[#111439] text-center leading-tight">
-                    get in
-                    <br />
-                    touch
-                  </h2>
+              <Magnet padding={50} magnetStrength={3}>
+                <div className="relative mb-16">
+                  <div className="w-48 h-48 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/20">
+                    <h2 className="text-2xl md:text-3xl font-black text-[#111439] text-center leading-tight">
+                      get in
+                      touch
+                    </h2>
+                  </div>
                 </div>
-              </div>
+              </Magnet>
 
               {/* Social icons */}
               <div className="flex items-center justify-center space-x-8">
