@@ -15,6 +15,19 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Avant Garde Demi BT";
+  src: url("https://db.onlinewebfonts.com/t/98bf0b578cf58b90a05f8bb6e590c6a1.eot");
+  src: url("https://db.onlinewebfonts.com/t/98bf0b578cf58b90a05f8bb6e590c6a1.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/98bf0b578cf58b90a05f8bb6e590c6a1.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/98bf0b578cf58b90a05f8bb6e590c6a1.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/98bf0b578cf58b90a05f8bb6e590c6a1.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/98bf0b578cf58b90a05f8bb6e590c6a1.svg#Avant Garde")format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Since Olifant is not available on Google Fonts, let's use a similar font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
@@ -67,6 +80,10 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .font-avant-garde {
+    font-family: "Avant Garde Demi BT", sans-serif;
   }
 }
 
