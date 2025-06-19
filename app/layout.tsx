@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import CustomCursor from "../components/customcursor";
 
 export const metadata: Metadata = {
-  title: "Navaneethakrishnan Portfolio",
+  title: "Naveen-PNTk",
   description: "Personal portfolio website of Navaneethakrishnan",
 };
 
