@@ -19,28 +19,27 @@ const skills = [
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="h-screen relative overflow-hidden font-avant-garde">
+    <section id="skills" className="min-h-[70vh] relative overflow-hidden font-avant-garde">
       {/* Single Consistent Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#F8F8F9] via-[#D4D4E8] to-[#111439]"></div>
 
-      <div className="relative z-10 flex items-center justify-center h-full py-12">
-        <div className="container mx-auto px-6">
-          <ScrollReveal offset={200} className="mx-auto max-w-2xl [--duration:500ms]">
+      <div className="relative z-10 flex items-center justify-center h-full py-8">
+        <div className="container mx-auto px-4">
+          <ScrollReveal offset={200} className="mx-auto max-w-[95%] [--duration:500ms]">
             {(isActive) => (
               <>
-                <div className="text-center mb-12">
+                <div className="text-center mb-8">
                   <h2 className={clsx(
                     { "translate-y-8 opacity-0": !isActive },
-                    "text-5xl md:text-7xl font-black text-[#111439] mb-6 transition-[transform,opacity] duration-[--duration]"
+                    "text-5xl md:text-7xl font-black text-[#111439] mb-4 transition-[transform,opacity] duration-[--duration]"
                   )}>
                     What I do
                   </h2>
                   <p className={clsx(
                     { "translate-y-8 opacity-0": !isActive },
-                    "text-lg md:text-xl text-[#111439]/80 max-w-4xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration]"
+                    "text-lg md:text-xl text-[#111439]/80 max-w-6xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration]"
                   )}>
-                    I am from Pakistan and currently living in Karachi. I am doing Bachelor's in Software engineering and I
-                    will graduate in the year 2021. I am UI Ux designer and currently working as a freelancer.
+                    Motivated and detail-oriented Computer Science Engineering student with hands-on experience in frontend development. Skilled in technologies such as React, Node.js, MongoDB, and Express.js. Successfully completed multiple academic and mini projects, demonstrating strong problem-solving and team collaboration abilities. Passionate about building scalable web applications and continuously learning emerging technologies. Eager to contribute technical skills to real-world software development roles.
                   </p>
                 </div>
               </>

@@ -6,58 +6,54 @@ import clsx from "clsx"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Modern e-commerce solution with React, Next.js, and Stripe integration",
-    image: "/placeholder.svg?height=300&width=400",
-    tags: ["React", "Next.js", "Stripe", "Tailwind"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Signature Sentry",
+    description: "A secure system for managing digital signatures.",
+    image: "/images/Sign-sentry.png",
+    tags: ["React", "Node.js", "Express", "MongoDB"],
+    liveUrl: "https://signature-sentry.onrender.com/",
   },
   {
-    title: "Design System",
-    description: "Comprehensive design system with reusable components and documentation",
-    image: "/placeholder.svg?height=300&width=400",
-    tags: ["React", "Storybook", "TypeScript", "Figma"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Productive Pro",
+    description: "A productivity application designed to help users manage tasks and stay organized.",
+    image: "/images/Productive-Pro.png",
+    tags: ["React", "Next.js", "Tailwind CSS", "Firebase"],
+    liveUrl: "https://productive-pro-flame.vercel.app/",
   },
   {
-    title: "Portfolio Website",
-    description: "Creative portfolio showcasing modern web development techniques",
-    image: "/placeholder.svg?height=300&width=400",
-    tags: ["Next.js", "Framer Motion", "Three.js", "GSAP"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "ResuMate",
+    description: "Create professional resumes in minutes with easy-to-use templates and step-by-step guidance.",
+    image: "/images/Resumate.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://resu-mate-sigma.vercel.app/",
   },
   {
-    title: "Mobile App UI",
-    description: "Cross-platform mobile application with beautiful user interface",
-    image: "/placeholder.svg?height=300&width=400",
-    tags: ["React Native", "Expo", "TypeScript", "Figma"],
-    liveUrl: "#",
-    githubUrl: "#",
+    title: "Bugatti Landing Page",
+    description: "A captivating landing page showcasing the ultimate Bugatti hypercars and models.",
+    image: "/images/buggati.png",
+    tags: ["HTML", "CSS", "JavaScript", "GSAP"],
+    liveUrl: "https://buggati-landingpage.vercel.app/",
   },
 ]
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="min-h-screen relative overflow-hidden py-20 font-avant-garde">
+    <section id="projects" className="min-h-[70vh] relative overflow-hidden py-16 font-avant-garde">
       {/* Single Consistent Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#F8F8F9] via-[#D4D4E8] to-[#111439]"></div>
 
-      <div className="relative z-10 container mx-auto px-6">
-        <ScrollReveal offset={200} className="mx-auto max-w-2xl [--duration:500ms]">
+      <div className="relative z-10 container mx-auto px-4">
+        <ScrollReveal offset={200} className="mx-auto max-w-[95%] [--duration:500ms]">
           {(isActive) => (
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className={clsx(
                 { "translate-y-8 opacity-0": !isActive },
-                "text-4xl md:text-6xl lg:text-7xl font-black text-[#111439] mb-6 transition-[transform,opacity] duration-[--duration]"
+                "text-4xl md:text-6xl lg:text-7xl font-black text-[#111439] mb-4 transition-[transform,opacity] duration-[--duration]"
               )}>
                 My Projects
               </h2>
               <p className={clsx(
                 { "translate-y-8 opacity-0": !isActive },
-                "text-lg md:text-xl text-[#111439]/70 max-w-2xl mx-auto transition-[transform,opacity] duration-[--duration]"
+                "text-lg md:text-xl text-[#111439]/70 max-w-6xl mx-auto transition-[transform,opacity] duration-[--duration]"
               )}>
                 Selected works showcasing creativity and technical expertise
               </p>
@@ -105,13 +101,6 @@ export function ProjectsSection() {
                         >
                           <ExternalLink className="w-4 h-4" />
                           <span>Live Demo</span>
-                        </a>
-                        <a
-                          href={project.githubUrl}
-                          className="flex items-center space-x-2 text-white hover:text-white/70 transition-colors text-sm"
-                        >
-                          <Github className="w-4 h-4" />
-                          <span>Code</span>
                         </a>
                       </div>
                     </div>

@@ -1,0 +1,14 @@
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.3s cubic-bezier(.23,1.01,.32,1), background 0.3s;
+    will-change: transform;
+}

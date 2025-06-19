@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import CustomCursor from "../components/customcursor";
 
 export const metadata: Metadata = {
   title: "Navaneethakrishnan Portfolio",
@@ -19,7 +20,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }
