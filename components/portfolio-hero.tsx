@@ -37,7 +37,7 @@ const PortfolioHero = () => {
               {/* Role and education */}
              <h1 className="text-[#111439] font-black text-4xl font-olifant">
   <DecryptedText
-    text="--Frontend Developer & Engineering graduate"
+    text="--Frontend Developer & UI/UX Designer"
     speed={50}
     sequential={true}
     revealDirection="start"
