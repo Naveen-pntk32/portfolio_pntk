@@ -14,7 +14,7 @@ export function Dock() {
   const handleClick = (href: string, isResume?: boolean) => {
     if (isResume) {
       // Open resume in new tab
-      window.open("/NavaneethaKrishnan-Resume.pdf", "_blank", "noopener,noreferrer")
+      window.open("/Naveenathakirshnan-Resume.pdf", "_blank", "noopener,noreferrer")
       return
     }
 
