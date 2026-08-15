@@ -39,7 +39,7 @@ export function SkillsSection() {
                     { "translate-y-8 opacity-0": !isActive },
                     "text-lg md:text-xl text-[#111439]/80 max-w-6xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration]"
                   )}>
-                    Motivated and detail-oriented Computer Science Engineering student with hands-on experience in frontend development. Skilled in technologies such as React, Node.js, MongoDB, and Express.js. Successfully completed multiple academic and mini projects, demonstrating strong problem-solving and team collaboration abilities. Passionate about building scalable web applications and continuously learning emerging technologies. Eager to contribute technical skills to real-world software development roles.
+                    I'm a software developer with self driven, hands on experience building full stack applications in Python, JavaScript, and React. I've shipped three independent projects end to end, from architecture to deployment, using REST APIs, PostgreSQL, and Git/GitHub for version control. I apply Data Structures & Algorithms to write efficient, maintainable code, and I'm comfortable working across the stack, from responsive frontend interfaces to backend logic and database design. I'm looking to join a collaborative engineering team as a Junior Software Developer.
                   </p>
                 </div>
               </>
