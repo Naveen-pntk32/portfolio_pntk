@@ -8,13 +8,13 @@ const skills = [
   { name: "HTML", logo: "/logo/icons8-html5-480.png" },
   { name: "CSS", logo: "/logo/icons8-css-480.png" },
   { name: "JAVASCRIPT", logo: "/logo/icons8-js-480.png" },
-  { name: "TYPESCRIPT", logo: "/logo/icons8-typescript-480.png" },
   { name: "REACT JS", logo: "/logo/icons8-react-js-480.png" },
-  { name: "NEXT.JS", logo: "/logo/icons8-nextjs-480.png" },
-  { name: "NODE JS", logo: "/logo/icons8-nodejs-480.png" },
   { name: "PYTHON", logo: "/logo/icons8-python-480.png" },
   { name: "JAVA", logo: "/logo/icons8-java-480.png" },
-  { name: "TAILWIND CSS", logo: "/logo/icons8-tailwindcss-480.png" },
+  { name: "SQL", logo: "/logo/icons8-sql-100-2.png" },
+  { name: "GIT", logo: "/logo/icons8-git-100.png" },
+  { name: "REST API", logo: "/logo/icons8-rest-api-100.png" },
+  { name: "VERCEL", logo: "/logo/icons8-vercel-100.png" },
 ]
 
 export function SkillsSection() {

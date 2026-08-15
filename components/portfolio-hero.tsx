@@ -28,29 +28,29 @@ const PortfolioHero = () => {
                   direction="top"
                   delay={200}
                 />
-                
+
                 <p className="text-[#111439] font-bold font-olifant text-[60px]">
                   I'm Navaneetha Krishnan
                 </p>
               </div>
 
               {/* Role and education */}
-             <h1 className="text-[#111439] font-black text-4xl font-olifant">
-  <DecryptedText
-    text="--Frontend Developer & UI/UX Designer"
-    speed={50}
-    sequential={true}
-    revealDirection="start"
-    animateOn="view"
-    className="text-[#111439]"
-  />
-</h1>
+              <h1 className="text-[#111439] font-black text-4xl font-avant-garde">
+                <DecryptedText
+                  text="-- Jr SOFTWARE DEVELOPER"
+                  speed={50}
+                  sequential={true}
+                  revealDirection="start"
+                  animateOn="view"
+                  className="text-[#111439]"
+                />
+              </h1>
 
 
               {/* Description */}
               <p className="text-[rgb(17,20,57)] text-xl max-w-2xl font-olifant">
                 <DecryptedText
-                  text="I craft responsive, accessible, and performance-driven web interfaces using React, Tailwind CSS, and modern JavaScript"
+                  text="I build efficient, scalable software solutions using Python, JavaScript, and React — from clean backend logic to intuitive user interfaces."
                   speed={30}
                   sequential={true}
                   revealDirection="start"
@@ -64,7 +64,7 @@ const PortfolioHero = () => {
           <div className="flex-1 flex items-center justify-center w-full h-full md:pr-16 md:pl-8 mt-8 md:mt-0">
             <div className="border-2 border-[#e0e7ef] rounded-[5px] p-2 inline-block">
               <TiltedCard
-                imageSrc="/images/cat-profile.jpg"
+                imageSrc="/images/IG-Profile.png"
                 altText="Profile Picture"
                 captionText=""
                 containerHeight="340px"
@@ -74,9 +74,8 @@ const PortfolioHero = () => {
                 scaleOnHover={1.2}
                 rotateAmplitude={10}
                 showMobileWarning={false}
-                showTooltip={true}
-                overlayContent={<span className="text-[#111439] font-bold font-olifant text-[60px]">Hello!</span>}
-                displayOverlayContent={true}
+                showTooltip={false}
+                displayOverlayContent={false}
                 glareColor="#fff"
                 glareOpacity={.3}
                 glareAngle={-50}
