@@ -1,9 +1,8 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import Script from "next/script";
 import CustomCursor from "../components/customcursor";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Naveen-PNTk",
   description: "Personal portfolio website of Navaneethakrishnan",
   manifest: "/favicon/site.webmanifest",
@@ -18,11 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>

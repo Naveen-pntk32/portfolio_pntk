@@ -4,32 +4,10 @@
 	Installed from https://reactbits.dev/ts/tailwind/
 */
 
-import type { SpringOptions } from "framer-motion";
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-interface TiltedCardProps {
-  imageSrc: React.ComponentProps<"img">["src"];
-  altText?: string;
-  captionText?: string;
-  containerHeight?: React.CSSProperties["height"];
-  containerWidth?: React.CSSProperties["width"];
-  imageHeight?: React.CSSProperties["height"];
-  imageWidth?: React.CSSProperties["width"];
-  scaleOnHover?: number;
-  rotateAmplitude?: number;
-  showMobileWarning?: boolean;
-  showTooltip?: boolean;
-  overlayContent?: React.ReactNode;
-  displayOverlayContent?: boolean;
-  glareColor?: string;
-  glareOpacity?: number;
-  glareAngle?: number;
-  glareSize?: number;
-  glareTransitionDuration?: number;
-}
-
-const springValues: SpringOptions = {
+const springValues = {
   damping: 30,
   stiffness: 100,
   mass: 2,
@@ -54,8 +32,8 @@ export default function TiltedCard({
   glareAngle = -45,
   glareSize = 250,
   glareTransitionDuration = 650,
-}: TiltedCardProps) {
-  const ref = useRef<HTMLElement>(null);
+}) {
+  const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), springValues);
@@ -71,7 +49,7 @@ export default function TiltedCard({
   const [lastY, setLastY] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  function handleMouse(e: React.MouseEvent<HTMLElement>) {
+  function handleMouse(e) {
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
@@ -121,9 +99,9 @@ export default function TiltedCard({
     rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;
   }
   const glareStyle = {
-    position: "absolute" as const,
+    position: "absolute",
     inset: 0,
-    pointerEvents: "none" as const,
+    pointerEvents: "none",
     background: `linear-gradient(${glareAngle}deg, hsla(0,0%,0%,0) 60%, ${rgba} 70%, hsla(0,0%,0%,0) 100%)`,
     backgroundSize: `${glareSize}% ${glareSize}%, 100% 100%`,
     backgroundRepeat: "no-repeat",

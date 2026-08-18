@@ -1,6 +1,5 @@
 "use client"
 
-import type React from "react"
 import { ScrollReveal } from "./ScrollReveal"
 import clsx from "clsx"
 
@@ -59,7 +58,7 @@ export function SkillsSection() {
                         { "translate-y-8 opacity-0": !isActive },
                         "flex flex-col items-center transition-[transform,opacity] duration-[--duration]"
                       )}
-                      style={{ "--delay": `${(index + 1) * 100}ms` } as React.CSSProperties}
+                      style={{ "--delay": `${(index + 1) * 100}ms` }}
                     >
                       <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 hover:bg-white/30 transition-all duration-300 border-2 border-[#111439]/30">
                         <img
@@ -84,7 +83,7 @@ export function SkillsSection() {
                         { "translate-y-8 opacity-0": !isActive },
                         "flex flex-col items-center transition-[transform,opacity] duration-[--duration]"
                       )}
-                      style={{ "--delay": `${(index + 6) * 100}ms` } as React.CSSProperties}
+                      style={{ "--delay": `${(index + 6) * 100}ms` }}
                     >
                       <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 hover:bg-white/30 transition-all duration-300 border-2 border-[#111439]/30">
                         <img

@@ -3,14 +3,7 @@
 import { useEffect, useState } from "react"
 import clsx from "clsx"
 
-interface ScrollRevealProps {
-  children: (isActive: boolean) => React.ReactNode
-  offset?: number
-  className?: string
-  delay?: number
-}
-
-export function ScrollReveal({ children, offset = 0, className, delay = 300 }: ScrollRevealProps) {
+export function ScrollReveal({ children, offset = 0, className, delay = 300 }) {
   const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
@@ -41,4 +34,4 @@ export function ScrollReveal({ children, offset = 0, className, delay = 300 }: S
   }, [offset, className, delay])
 
   return <div className={className}>{children(isActive)}</div>
-} 
+}

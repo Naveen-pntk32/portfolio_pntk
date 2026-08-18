@@ -11,7 +11,7 @@ const dockItems = [
 ]
 
 export function Dock() {
-  const handleClick = (href: string, isResume?: boolean) => {
+  const handleClick = (href, isResume) => {
     if (isResume) {
       // Open resume in new tab
       window.open(encodeURI("/Naveen - Dev Resume.pdf"), "_blank", "noopener,noreferrer")

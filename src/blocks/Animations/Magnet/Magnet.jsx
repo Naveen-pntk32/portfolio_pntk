@@ -8,22 +8,9 @@ import React, {
   useState,
   useEffect,
   useRef,
-  ReactNode,
-  HTMLAttributes,
 } from "react";
 
-interface MagnetProps extends HTMLAttributes<HTMLDivElement> {
-  children: ReactNode;
-  padding?: number;
-  disabled?: boolean;
-  magnetStrength?: number;
-  activeTransition?: string;
-  inactiveTransition?: string;
-  wrapperClassName?: string;
-  innerClassName?: string;
-}
-
-const Magnet: React.FC<MagnetProps> = ({
+const Magnet = ({
   children,
   padding = 100,
   disabled = false,
@@ -34,12 +21,12 @@ const Magnet: React.FC<MagnetProps> = ({
   innerClassName = "",
   ...props
 }) => {
-  const [isActive, setIsActive] = useState<boolean>(false);
-  const [position, setPosition] = useState<{ x: number; y: number }>({
+  const [isActive, setIsActive] = useState(false);
+  const [position, setPosition] = useState({
     x: 0,
     y: 0,
   });
-  const magnetRef = useRef<HTMLDivElement>(null);
+  const magnetRef = useRef(null);
 
   useEffect(() => {
     if (disabled) {
@@ -47,7 +34,7 @@ const Magnet: React.FC<MagnetProps> = ({
       return;
     }
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       if (!magnetRef.current) return;
 
       const { left, top, width, height } =

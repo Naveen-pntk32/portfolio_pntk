@@ -4,8 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "./styles.module.css";
 
-const CustomCursor: React.FC = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
+const CustomCursor = () => {
+  const cursorRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true); // To handle cursor visibility
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const CustomCursor: React.FC = () => {
 
     if (!cursor) return;
 
-    const moveCursor = (e: MouseEvent) => {
+    const moveCursor = (e) => {
       gsap.to(cursor, {
         x: e.clientX,
         y: e.clientY,
@@ -43,8 +43,8 @@ const CustomCursor: React.FC = () => {
     const textElements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
 
     textElements.forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseEnter as EventListener);
-      el.addEventListener("mouseleave", handleMouseLeave as EventListener);
+      el.addEventListener("mouseenter", handleMouseEnter);
+      el.addEventListener("mouseleave", handleMouseLeave);
     });
 
     // Function to handle screen resizing
@@ -64,8 +64,8 @@ const CustomCursor: React.FC = () => {
 
     return () => {
       textElements.forEach((el) => {
-        el.removeEventListener("mouseenter", handleMouseEnter as EventListener);
-        el.removeEventListener("mouseleave", handleMouseLeave as EventListener);
+        el.removeEventListener("mouseenter", handleMouseEnter);
+        el.removeEventListener("mouseleave", handleMouseLeave);
       });
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("resize", handleResize);

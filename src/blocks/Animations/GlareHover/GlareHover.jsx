@@ -6,24 +6,7 @@
 
 import React, { useRef } from "react";
 
-interface GlareHoverProps {
-  width?: string;
-  height?: string;
-  background?: string;
-  borderRadius?: string;
-  borderColor?: string;
-  children?: React.ReactNode;
-  glareColor?: string;
-  glareOpacity?: number;
-  glareAngle?: number;
-  glareSize?: number;
-  transitionDuration?: number;
-  playOnce?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-}
-
-const GlareHover: React.FC<GlareHoverProps> = ({
+const GlareHover = ({
   width = "500px",
   height = "500px",
   background = "#000",
@@ -53,7 +36,7 @@ const GlareHover: React.FC<GlareHoverProps> = ({
     rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;
   }
 
-  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const overlayRef = useRef(null);
 
   const animateIn = () => {
     const el = overlayRef.current;
@@ -79,7 +62,7 @@ const GlareHover: React.FC<GlareHoverProps> = ({
     }
   };
 
-  const overlayStyle: React.CSSProperties = {
+  const overlayStyle = {
     position: "absolute",
     inset: 0,
     background: `linear-gradient(${glareAngle}deg,

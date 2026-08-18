@@ -41,7 +41,7 @@ const VISIBLE_COUNT = 4;
 
 export function ProjectsSection() {
   const [selected, setSelected] = useState(0)
-  const listRef = useRef<HTMLDivElement>(null)
+  const listRef = useRef(null)
   const totalProjects = projects.length
 
   // Infinite scroll logic
@@ -77,7 +77,7 @@ export function ProjectsSection() {
   }, [selected, totalProjects])
 
   // Render the list 3 times: [clone][main][clone]
-  const renderProjects = (cb: (project: typeof projects[0], idx: number, realIdx: number) => React.ReactNode) => {
+  const renderProjects = (cb) => {
     return [
       ...projects.map((p, i) => cb(p, i, i - totalProjects)), // top clone
       ...projects.map((p, i) => cb(p, i, i)), // main
