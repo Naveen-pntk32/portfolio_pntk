@@ -23,19 +23,19 @@ export function SkillsSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#F8F8F9] via-[#D4D4E8] to-[#111439]"></div>
 
       <div className="relative z-10 flex items-center justify-center h-full w-full py-4 sm:py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
           <ScrollReveal offset={100} className="mx-auto max-w-5xl [--duration:500ms]">
             {(isActive) => (
-              <div className="text-center mb-8 sm:mb-12">
+              <div className="text-center mb-8 sm:mb-14">
                 <h2 className={clsx(
                   { "translate-y-8 opacity-0": !isActive },
-                  "text-3xl sm:text-4xl md:text-6xl lg:text-[68px] font-black text-[#111439] mb-3 sm:mb-4 transition-[transform,opacity] duration-[--duration]"
+                  "text-4xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[80px] font-black text-[#111439] mb-3 sm:mb-5 transition-[transform,opacity] duration-[--duration]"
                 )}>
                   What I do
                 </h2>
                 <p className={clsx(
                   { "translate-y-8 opacity-0": !isActive },
-                  "text-sm sm:text-base md:text-lg lg:text-[20px] text-[#111439]/80 max-w-5xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration] px-2"
+                  "text-sm sm:text-base md:text-lg lg:text-xl text-[#111439]/85 max-w-5xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration] px-2"
                 )}>
                   I'm a software developer with self driven, hands on experience building full stack applications in Python, JavaScript, and React. I've shipped three independent projects end to end, from architecture to deployment, using REST APIs, PostgreSQL, and Git/GitHub for version control. I apply Data Structures & Algorithms to write efficient, maintainable code, and I'm comfortable working across the stack, from responsive frontend interfaces to backend logic and database design. I'm looking to join a collaborative engineering team as a Junior Software Developer.
                 </p>
@@ -44,9 +44,9 @@ export function SkillsSection() {
           </ScrollReveal>
 
           {/* Skills Grid */}
-          <ScrollReveal offset={100} className="max-w-5xl mx-auto [--duration:500ms]">
+          <ScrollReveal offset={100} className="max-w-6xl mx-auto [--duration:500ms]">
             {(isActive) => (
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-items-center">
                 {skills.map((skill, index) => (
                   <div 
                     key={skill.name} 
@@ -56,7 +56,7 @@ export function SkillsSection() {
                     )}
                     style={{ "--delay": `${(index + 1) * 80}ms` }}
                   >
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-26 md:h-26 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-2 sm:mb-3 hover:bg-white/35 hover:scale-105 transition-all duration-300 border-2 border-[#111439]/20 shadow-lg">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-2.5 sm:mb-3.5 hover:bg-white/35 hover:scale-105 transition-all duration-300 border-2 border-[#111439]/20 shadow-md">
                       <img
                         src={skill.logo}
                         alt={skill.name}
