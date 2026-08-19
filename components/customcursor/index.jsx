@@ -47,12 +47,13 @@ const CustomCursor = () => {
       el.addEventListener("mouseleave", handleMouseLeave);
     });
 
-    // Function to handle screen resizing
+    // Function to handle screen resizing and touch devices
     const handleResize = () => {
-      if (window.innerWidth < 840) {
-        setIsVisible(false); // Hide cursor if screen width is less than 840px
+      const isCoarse = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+      if (window.innerWidth < 840 || isCoarse) {
+        setIsVisible(false); // Hide cursor if screen width is less than 840px or on touch devices
       } else {
-        setIsVisible(true); // Show cursor if screen width is greater than 840px
+        setIsVisible(true); // Show cursor if desktop mouse
       }
     };
 

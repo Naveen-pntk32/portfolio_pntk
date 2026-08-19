@@ -114,7 +114,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center rounded-[5px]"
+      className="relative max-w-full [perspective:800px] flex flex-col items-center justify-center rounded-[5px]"
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -130,7 +130,7 @@ export default function TiltedCard({
       )}
 
       <motion.div
-        className="relative [transform-style:preserve-3d]"
+        className="relative max-w-full [transform-style:preserve-3d]"
         style={{
           width: imageWidth,
           height: imageHeight,
@@ -147,10 +147,10 @@ export default function TiltedCard({
         <motion.img
           src={imageSrc}
           alt={altText}
-          className="absolute top-0 left-0 object-cover rounded-[5px] will-change-transform [transform:translateZ(0)]"
+          className="absolute top-0 left-0 w-full h-full object-cover rounded-[5px] will-change-transform [transform:translateZ(0)]"
           style={{
-            width: imageWidth,
-            height: imageHeight,
+            maxWidth: "100%",
+            maxHeight: "100%",
           }}
         />
 

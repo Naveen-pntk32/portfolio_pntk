@@ -18,87 +18,57 @@ const skills = [
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="min-h-[70vh] relative overflow-hidden font-avant-garde">
+    <section id="skills" className="min-h-screen relative overflow-hidden font-avant-garde flex items-center py-16 sm:py-20 md:py-24">
       {/* Single Consistent Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#F8F8F9] via-[#D4D4E8] to-[#111439]"></div>
 
-      <div className="relative z-10 flex items-center justify-center h-full py-8">
-        <div className="container mx-auto px-4">
-          <ScrollReveal offset={200} className="mx-auto max-w-[95%] [--duration:500ms]">
+      <div className="relative z-10 flex items-center justify-center h-full w-full py-4 sm:py-8">
+        <div className="container mx-auto px-4 sm:px-6">
+          <ScrollReveal offset={100} className="mx-auto max-w-5xl [--duration:500ms]">
             {(isActive) => (
-              <>
-                <div className="text-center mb-8">
-                  <h2 className={clsx(
-                    { "translate-y-8 opacity-0": !isActive },
-                    "text-5xl md:text-7xl font-black text-[#111439] mb-4 transition-[transform,opacity] duration-[--duration]"
-                  )}>
-                    What I do
-                  </h2>
-                  <p className={clsx(
-                    { "translate-y-8 opacity-0": !isActive },
-                    "text-lg md:text-xl text-[#111439]/80 max-w-6xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration]"
-                  )}>
-                    I'm a software developer with self driven, hands on experience building full stack applications in Python, JavaScript, and React. I've shipped three independent projects end to end, from architecture to deployment, using REST APIs, PostgreSQL, and Git/GitHub for version control. I apply Data Structures & Algorithms to write efficient, maintainable code, and I'm comfortable working across the stack, from responsive frontend interfaces to backend logic and database design. I'm looking to join a collaborative engineering team as a Junior Software Developer.
-                  </p>
-                </div>
-              </>
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className={clsx(
+                  { "translate-y-8 opacity-0": !isActive },
+                  "text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#111439] mb-3 sm:mb-4 transition-[transform,opacity] duration-[--duration]"
+                )}>
+                  What I do
+                </h2>
+                <p className={clsx(
+                  { "translate-y-8 opacity-0": !isActive },
+                  "text-sm sm:text-base md:text-lg text-[#111439]/80 max-w-4xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration] px-2"
+                )}>
+                  I'm a software developer with self driven, hands on experience building full stack applications in Python, JavaScript, and React. I've shipped three independent projects end to end, from architecture to deployment, using REST APIs, PostgreSQL, and Git/GitHub for version control. I apply Data Structures & Algorithms to write efficient, maintainable code, and I'm comfortable working across the stack, from responsive frontend interfaces to backend logic and database design. I'm looking to join a collaborative engineering team as a Junior Software Developer.
+                </p>
+              </div>
             )}
           </ScrollReveal>
 
           {/* Skills Grid */}
-          <ScrollReveal offset={200} className="max-w-5xl mx-auto [--duration:500ms]">
+          <ScrollReveal offset={100} className="max-w-5xl mx-auto [--duration:500ms]">
             {(isActive) => (
-              <>
-                {/* First Row */}
-                <div className="grid grid-cols-5 gap-8 mb-12 justify-items-center">
-                  {skills.slice(0, 5).map((skill, index) => (
-                    <div 
-                      key={index} 
-                      className={clsx(
-                        { "translate-y-8 opacity-0": !isActive },
-                        "flex flex-col items-center transition-[transform,opacity] duration-[--duration]"
-                      )}
-                      style={{ "--delay": `${(index + 1) * 100}ms` }}
-                    >
-                      <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 hover:bg-white/30 transition-all duration-300 border-2 border-[#111439]/30">
-                        <img
-                          src={skill.logo}
-                          alt={skill.name}
-                          className="w-16 h-16 object-contain"
-                        />
-                      </div>
-                      <span className="text-[#111439] font-semibold text-sm tracking-wide text-center">
-                        {skill.name}
-                      </span>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 md:gap-8 justify-items-center">
+                {skills.map((skill, index) => (
+                  <div 
+                    key={skill.name} 
+                    className={clsx(
+                      { "translate-y-8 opacity-0": !isActive },
+                      "flex flex-col items-center transition-[transform,opacity] duration-[--duration]"
+                    )}
+                    style={{ "--delay": `${(index + 1) * 80}ms` }}
+                  >
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-2 sm:mb-3 hover:bg-white/35 hover:scale-105 transition-all duration-300 border-2 border-[#111439]/20 shadow-md">
+                      <img
+                        src={skill.logo}
+                        alt={skill.name}
+                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                      />
                     </div>
-                  ))}
-                </div>
-
-                {/* Second Row */}
-                <div className="grid grid-cols-5 gap-8 justify-items-center">
-                  {skills.slice(5, 10).map((skill, index) => (
-                    <div 
-                      key={index + 5} 
-                      className={clsx(
-                        { "translate-y-8 opacity-0": !isActive },
-                        "flex flex-col items-center transition-[transform,opacity] duration-[--duration]"
-                      )}
-                      style={{ "--delay": `${(index + 6) * 100}ms` }}
-                    >
-                      <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 hover:bg-white/30 transition-all duration-300 border-2 border-[#111439]/30">
-                        <img
-                          src={skill.logo}
-                          alt={skill.name}
-                          className="w-16 h-16 object-contain"
-                        />
-                      </div>
-                      <span className="text-[#111439] font-semibold text-sm tracking-wide text-center">
-                        {skill.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </>
+                    <span className="text-[#111439] font-bold text-xs sm:text-sm tracking-wide text-center">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             )}
           </ScrollReveal>
         </div>

@@ -86,77 +86,109 @@ export function ProjectsSection() {
   }
 
   return (
-    <section id="projects" className="min-h-[70vh] py-16 font-avant-garde bg-gradient-to-r from-[#F8F8F9] via-[#D4D4E8] to-[#111439]">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-black text-[#111439] mb-4">My Projects</h2>
-          <p className="text-lg md:text-xl text-[#111439]/70 max-w-6xl mx-auto">Selected works showcasing creativity and technical expertise</p>
-        </div>
-        <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
-          {/* Left: Scrollable List */}
-          <div className="md:w-1/2 w-full">
-            <div
-              ref={listRef}
-              className="scroll-list__wrp js-scroll-content js-scroll-list h-[400px] overflow-y-auto p-4 rounded-lg shadow-lg bg-[#1c2e4a]"
-              style={{ background: "linear-gradient(147deg, #2e3a59 0%, #1a2b46 74%)", maxHeight: ITEM_HEIGHT * VISIBLE_COUNT }}
-            >
-              {renderProjects((project, idx, realIdx) => (
+    <section id="projects" className="min-h-screen py-16 sm:py-20 md:py-24 font-avant-garde bg-gradient-to-r from-[#F8F8F9] via-[#D4D4E8] to-[#111439] flex items-center">
+      <div className="container mx-auto px-4 sm:px-6">
+        <ScrollReveal offset={100} className="text-center mb-8 sm:mb-12 max-w-4xl mx-auto [--duration:500ms]">
+          {(isActive) => (
+            <>
+              <h2 className={clsx(
+                { "translate-y-8 opacity-0": !isActive },
+                "text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#111439] mb-3 sm:mb-4 transition-[transform,opacity] duration-[--duration]"
+              )}>
+                My Projects
+              </h2>
+              <p className={clsx(
+                { "translate-y-8 opacity-0": !isActive },
+                "text-sm sm:text-base md:text-lg lg:text-xl text-[#111439]/70 max-w-3xl mx-auto px-2 transition-[transform,opacity] duration-[--duration]"
+              )}>
+                Selected works showcasing creativity and technical expertise
+              </p>
+            </>
+          )}
+        </ScrollReveal>
+
+        <ScrollReveal offset={100} className="flex flex-col lg:flex-row gap-6 sm:gap-8 max-w-5xl mx-auto items-center [--duration:500ms]">
+          {(isActive) => (
+            <>
+              {/* Left: Scrollable List / Selector */}
+              <div className={clsx(
+                { "translate-y-8 opacity-0": !isActive },
+                "w-full lg:w-1/2 transition-[transform,opacity] duration-[--duration]"
+              )}>
                 <div
-                  key={realIdx}
-                  className={`scroll-list__item js-scroll-list-item mb-4 rounded-lg cursor-pointer transition-all duration-300 ${
-                    selected === (idx % totalProjects) && realIdx >= 0 && realIdx < totalProjects ? "item-focus border-2 border-blue-400 scale-105" : "item-hide opacity-70 hover:scale-105"
-                  }`}
-                  style={{
-                    background: "linear-gradient(147deg, #4a90e2 0%, #0072ff 74%)",
-                    height: 90,
-                    display: "flex",
-                    alignItems: "center",
-                    padding: 16,
-                  }}
-                  onClick={() => setSelected(idx % totalProjects)}
+                  ref={listRef}
+                  className="scroll-list__wrp js-scroll-content js-scroll-list h-[320px] sm:h-[380px] md:h-[400px] overflow-y-auto p-3 sm:p-4 rounded-2xl shadow-xl bg-[#1c2e4a] border border-white/10"
+                  style={{ background: "linear-gradient(147deg, #2e3a59 0%, #1a2b46 74%)" }}
                 >
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-16 h-16 object-cover rounded mr-4 border border-white/30"
-                  />
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-1">{project.title}</h3>
-                    <p className="text-xs text-white/80">{project.tags.join(", ")}</p>
-                  </div>
+                  {renderProjects((project, idx, realIdx) => (
+                    <div
+                      key={realIdx}
+                      className={`scroll-list__item js-scroll-list-item mb-3 sm:mb-4 rounded-xl cursor-pointer transition-all duration-300 ${
+                        selected === (idx % totalProjects) && realIdx >= 0 && realIdx < totalProjects ? "item-focus ring-2 ring-blue-400 scale-[1.02] sm:scale-105 shadow-lg" : "item-hide opacity-75 hover:opacity-100 hover:scale-[1.02]"
+                      }`}
+                      style={{
+                        background: selected === (idx % totalProjects) && realIdx >= 0 && realIdx < totalProjects
+                          ? "linear-gradient(147deg, #3b82f6 0%, #1d4ed8 74%)"
+                          : "linear-gradient(147deg, #4a90e2 0%, #0072ff 74%)",
+                        minHeight: 80,
+                        display: "flex",
+                        alignItems: "center",
+                        padding: "12px 16px",
+                      }}
+                      onClick={() => setSelected(idx % totalProjects)}
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-12 h-12 sm:w-14 sm:h-14 object-cover rounded-lg mr-3 sm:mr-4 border border-white/40 shrink-0"
+                      />
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-base sm:text-lg font-bold text-white mb-0.5 truncate">{project.title}</h3>
+                        <p className="text-xs text-white/80 line-clamp-1">{project.tags.join(", ")}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-          {/* Right: Project Details */}
-          <div className="md:w-1/2 w-full flex items-center justify-center">
-            <div className="bg-white/30 backdrop-blur-md rounded-lg shadow-lg p-8 w-full max-w-md">
-              <img
-                src={projects[selected].image}
-                alt={projects[selected].title}
-                className="w-full h-48 object-cover rounded mb-4 border border-white/30"
-              />
-              <h3 className="text-2xl font-bold mb-2 text-[#111439]">{projects[selected].title}</h3>
-              <p className="mb-4 text-[#111439]/80">{projects[selected].description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {projects[selected].tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="px-3 py-1 bg-white/20 backdrop-blur-sm text-xs text-[#111439]">
-                    {tag}
-                  </span>
-                ))}
               </div>
-              <a
-                href={projects[selected].liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-blue-700 hover:text-blue-900 transition-colors text-sm font-semibold"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
-            </div>
-          </div>
-        </div>
+
+              {/* Right: Project Details Card */}
+              <div className={clsx(
+                { "translate-y-8 opacity-0": !isActive },
+                "w-full lg:w-1/2 flex items-center justify-center transition-[transform,opacity] duration-[--duration]"
+              )}>
+                <div className="bg-white/30 backdrop-blur-md rounded-2xl shadow-xl p-5 sm:p-6 md:p-8 w-full max-w-lg border border-white/30">
+                  <div className="overflow-hidden rounded-xl mb-4 border border-white/30 shadow-inner">
+                    <img
+                      src={projects[selected].image}
+                      alt={projects[selected].title}
+                      className="w-full h-40 sm:h-48 md:h-52 object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black mb-2 text-[#111439]">{projects[selected].title}</h3>
+                  <p className="mb-4 text-xs sm:text-sm md:text-base text-[#111439]/80 leading-relaxed">{projects[selected].description}</p>
+                  
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-5">
+                    {projects[selected].tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="px-2.5 py-1 bg-white/40 backdrop-blur-sm rounded-full text-xs font-semibold text-[#111439] border border-white/20">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={projects[selected].liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-xl bg-[#111439] text-white hover:bg-[#1a2b46] active:scale-95 transition-all text-xs sm:text-sm font-bold shadow-md w-full sm:w-auto"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </>
+          )}
+        </ScrollReveal>
       </div>
       <style jsx global>{`
         .scroll-list__wrp {
@@ -164,7 +196,7 @@ export function ProjectsSection() {
           scrollbar-color: #4a90e2 #1c2e4a;
         }
         .scroll-list__wrp::-webkit-scrollbar {
-          width: 8px;
+          width: 6px;
         }
         .scroll-list__wrp::-webkit-scrollbar-thumb {
           background: #4a90e2;
@@ -175,7 +207,7 @@ export function ProjectsSection() {
         }
         .scroll-list__item {
           opacity: 0.8;
-          transform: scale(0.97);
+          transform: scale(0.98);
         }
         .scroll-list__item.item-focus {
           opacity: 1;
@@ -183,7 +215,7 @@ export function ProjectsSection() {
         }
         .scroll-list__item.item-hide {
           opacity: 0.7;
-          transform: scale(0.97);
+          transform: scale(0.98);
         }
       `}</style>
     </section>

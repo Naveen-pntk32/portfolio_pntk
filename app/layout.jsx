@@ -6,7 +6,6 @@ export const metadata = {
   title: "Naveen-PNTk",
   description: "Personal portfolio website of Navaneethakrishnan",
   manifest: "/favicon/site.webmanifest",
-  themeColor: "#ffffff",
   icons: {
     icon: [
       { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -17,9 +16,16 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link
           href="https://db.onlinewebfonts.com/c/030ff7f43dec5bbb2c99976c7acdd7b1?family=Olifant+W00+Normal"
@@ -38,7 +44,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body>
+      <body className="min-h-screen w-full overflow-x-hidden antialiased">
         <CustomCursor />
         {children}
       </body>

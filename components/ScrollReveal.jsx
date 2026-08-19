@@ -1,12 +1,15 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import clsx from "clsx"
+import { useEffect, useState, useRef } from "react"
 
-export function ScrollReveal({ children, offset = 0, className, delay = 300 }) {
+export function ScrollReveal({ children, offset = 0, className, delay = 150 }) {
   const [isActive, setIsActive] = useState(false)
+  const elementRef = useRef(null)
 
   useEffect(() => {
+    const element = elementRef.current
+    if (!element) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -17,21 +20,21 @@ export function ScrollReveal({ children, offset = 0, className, delay = 300 }) {
         }
       },
       {
-        rootMargin: `-${offset}px`,
+        rootMargin: `0px 0px -${Math.max(0, offset)}px 0px`,
+        threshold: 0.05,
       }
     )
 
-    const element = document.querySelector(`.${className?.split(" ")[0]}`)
-    if (element) {
-      observer.observe(element)
-    }
+    observer.observe(element)
 
     return () => {
-      if (element) {
-        observer.unobserve(element)
-      }
+      observer.disconnect()
     }
-  }, [offset, className, delay])
+  }, [offset, delay])
 
-  return <div className={className}>{children(isActive)}</div>
+  return (
+    <div ref={elementRef} className={className}>
+      {children(isActive)}
+    </div>
+  )
 }
