@@ -24,8 +24,8 @@ export function ContactSection() {
                   {/* Circular heading */}
                   <Magnet padding={40} magnetStrength={2.5}>
                     <div className="relative mb-8 sm:mb-12 md:mb-16">
-                      <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-xl">
-                        <h2 className="text-xl sm:text-2xl font-black text-[#111439] text-center leading-tight">
+                      <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-2xl">
+                        <h2 className="text-xl sm:text-2xl md:text-[26px] font-black text-[#111439] text-center leading-tight">
                           get in<br />touch
                         </h2>
                       </div>
@@ -38,7 +38,7 @@ export function ContactSection() {
                       <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/20 transition-all duration-300 group-hover:bg-white/50 group-hover:scale-110 shadow-md">
                         <Github className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-[#111439]" />
                       </div>
-                      <p className="mt-2 text-center text-xs sm:text-sm font-semibold text-[#111439]">GitHub</p>
+                      <p className="mt-2 text-center text-xs sm:text-sm md:text-base font-semibold text-[#111439]">GitHub</p>
                     </a>
 
                     <a
@@ -50,14 +50,14 @@ export function ContactSection() {
                       <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/20 transition-all duration-300 group-hover:bg-white/50 group-hover:scale-110 shadow-md">
                         <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-[#111439]" />
                       </div>
-                      <p className="mt-2 text-center text-sm font-semibold text-[#111439]">LinkedIn</p>
+                      <p className="mt-2 text-center text-xs sm:text-sm md:text-base font-semibold text-[#111439]">LinkedIn</p>
                     </a>
 
                     <a href="mailto:pnavaneethakrishnan07@gmail.com" className="group flex flex-col items-center">
                       <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/20 transition-all duration-300 group-hover:bg-white/50 group-hover:scale-110 shadow-md">
                         <Mail className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-[#111439]" />
                       </div>
-                      <p className="mt-2 text-center text-xs sm:text-sm font-semibold text-[#111439]">Email</p>
+                      <p className="mt-2 text-center text-xs sm:text-sm md:text-base font-semibold text-[#111439]">Email</p>
                     </a>
                   </div>
                 </div>
@@ -69,13 +69,13 @@ export function ContactSection() {
                 )}>
                   <div className="relative text-center lg:text-left px-2 sm:px-4">
                     <blockquote
-                      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#111439] font-black leading-tight"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-[44px] text-[#111439] font-black leading-tight"
                       style={{ fontFamily: "Avant Garde Demi BT, sans-serif" }}
                     >
-                      <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#111439] font-black leading-tight">
+                      <p className="text-xl sm:text-2xl md:text-3xl lg:text-[44px] text-[#111439] font-black leading-tight">
                         &#x201C; Small steps are
                       </p>
-                      <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#111439] font-black leading-tight mt-1 sm:mt-2">
+                      <p className="text-xl sm:text-2xl md:text-3xl lg:text-[44px] text-[#111439] font-black leading-tight mt-1 sm:mt-2">
                         Better than NO Steps &#x201D;
                       </p>
                     </blockquote>

@@ -29,13 +29,13 @@ export function SkillsSection() {
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className={clsx(
                   { "translate-y-8 opacity-0": !isActive },
-                  "text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-[#111439] mb-3 sm:mb-4 transition-[transform,opacity] duration-[--duration]"
+                  "text-3xl sm:text-4xl md:text-6xl lg:text-[68px] font-black text-[#111439] mb-3 sm:mb-4 transition-[transform,opacity] duration-[--duration]"
                 )}>
                   What I do
                 </h2>
                 <p className={clsx(
                   { "translate-y-8 opacity-0": !isActive },
-                  "text-sm sm:text-base md:text-lg text-[#111439]/80 max-w-4xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration] px-2"
+                  "text-sm sm:text-base md:text-lg lg:text-[20px] text-[#111439]/80 max-w-5xl mx-auto leading-relaxed transition-[transform,opacity] duration-[--duration] px-2"
                 )}>
                   I'm a software developer with self driven, hands on experience building full stack applications in Python, JavaScript, and React. I've shipped three independent projects end to end, from architecture to deployment, using REST APIs, PostgreSQL, and Git/GitHub for version control. I apply Data Structures & Algorithms to write efficient, maintainable code, and I'm comfortable working across the stack, from responsive frontend interfaces to backend logic and database design. I'm looking to join a collaborative engineering team as a Junior Software Developer.
                 </p>
@@ -56,14 +56,14 @@ export function SkillsSection() {
                     )}
                     style={{ "--delay": `${(index + 1) * 80}ms` }}
                   >
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-2 sm:mb-3 hover:bg-white/35 hover:scale-105 transition-all duration-300 border-2 border-[#111439]/20 shadow-md">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-26 md:h-26 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-2 sm:mb-3 hover:bg-white/35 hover:scale-105 transition-all duration-300 border-2 border-[#111439]/20 shadow-lg">
                       <img
                         src={skill.logo}
                         alt={skill.name}
-                        className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                        className="w-12 h-12 sm:w-16 sm:h-16 md:w-18 md:h-18 object-contain"
                       />
                     </div>
-                    <span className="text-[#111439] font-bold text-xs sm:text-sm tracking-wide text-center">
+                    <span className="text-[#111439] font-bold text-xs sm:text-sm md:text-base tracking-wide text-center">
                       {skill.name}
                     </span>
                   </div>
