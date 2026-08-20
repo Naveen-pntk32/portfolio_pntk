@@ -42,7 +42,7 @@ export function ContactSection() {
                     </a>
 
                     <a
-                      href="https://www.linkedin.com/in/naveen-pntk/"
+                      href="https://www.linkedin.com/in/navien-krish/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex flex-col items-center"

@@ -8,16 +8,16 @@ import clsx from "clsx"
 const projects = [
   {
     title: "Signature Sentry",
-    description: "A secure system for managing digital signatures.",
+    description: "A Siamese Neural Network (SNN) based signature verification system achieving 90%+ classification accuracy with a Python & Flask backend and real-time React frontend.",
     image: "/images/Sign-sentry.png",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
+    tags: ["Python", "Flask", "TensorFlow", "React"],
     liveUrl: "https://signature-sentry.onrender.com/",
   },
   {
-    title: "Productive Pro",
-    description: "A productivity application designed to help users manage tasks and stay organized.",
+    title: "ZenPulse (Productive Pro)",
+    description: "A SaaS productivity application with JWT authentication, a Python REST API backend with 8+ CRUD endpoints, and Pomodoro focus analytics.",
     image: "/images/Productive-Pro.png",
-    tags: ["React", "Next.js", "Tailwind CSS", "Firebase"],
+    tags: ["React", "JavaScript", "Python", "REST APIs"],
     liveUrl: "https://productive-pro-flame.vercel.app/",
   },
   {
@@ -28,10 +28,10 @@ const projects = [
     liveUrl: "https://resu-mate-sigma.vercel.app/",
   },
   {
-    title: "Bugatti Landing Page",
-    description: "A captivating landing page showcasing the ultimate Bugatti hypercars and models.",
+    title: "Luxury Automotive Showcase",
+    description: "A modern automotive showcase site inspired by Bugatti's design language, featuring real-time search & filtering and interactive enquiry workflows.",
     image: "/images/buggati.png",
-    tags: ["HTML", "CSS", "JavaScript", "GSAP"],
+    tags: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
     liveUrl: "https://buggati-landingpage.vercel.app/",
   },
 ]
