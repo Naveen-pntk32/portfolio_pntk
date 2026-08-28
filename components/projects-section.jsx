@@ -14,30 +14,23 @@ const projects = [
     liveUrl: "https://signature-sentry.onrender.com/",
   },
   {
-    title: "ZenPulse (Productive Pro)",
+    title: "ZenPulse",
     description: "A SaaS productivity application with JWT authentication, a Python REST API backend with 8+ CRUD endpoints, and Pomodoro focus analytics.",
-    image: "/images/Productive-Pro.png",
+    image: "/images/Zenpulse.png",
     tags: ["React", "JavaScript", "Python", "REST APIs"],
     liveUrl: "https://productive-pro-flame.vercel.app/",
   },
   {
-    title: "ResuMate",
-    description: "Create professional resumes in minutes with easy-to-use templates and step-by-step guidance.",
-    image: "/images/Resumate.png",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    liveUrl: "https://resu-mate-sigma.vercel.app/",
-  },
-  {
     title: "Luxury Automotive Showcase",
     description: "A modern automotive showcase site inspired by Bugatti's design language, featuring real-time search & filtering and interactive enquiry workflows.",
-    image: "/images/buggati.png",
+    image: "/images/Buggatti.png",
     tags: ["React", "JavaScript", "REST APIs", "Tailwind CSS"],
     liveUrl: "https://buggati-landingpage.vercel.app/",
   },
 ]
 
 const ITEM_HEIGHT = 90 + 16; // height + margin (px)
-const VISIBLE_COUNT = 4;
+const VISIBLE_COUNT = 3;
 
 export function ProjectsSection() {
   const [selected, setSelected] = useState(0)
