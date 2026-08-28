@@ -47,34 +47,38 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  background: #111439;
+  background: linear-gradient(to right, #F8F8F9, #D4D4E8, #111439);
+  background-attachment: fixed;
 }
 
 body {
   font-family: var(--font-geist-sans);
-}
-
-/* Start at the bottom (Home section) */
-html,
-body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
 }
 
-/* Custom scrollbar for better UX */
-::-webkit-scrollbar {
-  width: 8px;
+/* Seamless Hidden Scrollbar (Signature Sentry Style - 100% Full-bleed design) */
+html,
+body,
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(248, 248, 249, 0.1);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(17, 20, 57, 0.3);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(17, 20, 57, 0.5);
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
 @layer utilities {
